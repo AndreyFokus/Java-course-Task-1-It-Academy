@@ -10,27 +10,32 @@ public class Main {
         
         int e = 1; 
         int f = 5; 
-        
+         
+        boolean canFit = false;
         
         if ((e >= (a + c)) && (f >= b && f >= d)) {
-            System.out.println("Оба дома помещаются на участке.");
+            canFit = true;
         } else if ((e >= (a + d)) && (f >= b && f >= c)) {
-            System.out.println("Оба дома помещаются на участке.");
+            canFit = true;
         } else if ((e >= (b + c)) && (f >= a && f >= d)) {
-            System.out.println("Оба дома помещаются на участке.");
+            canFit = true;
         } else if ((e >= (b + d)) && (f >= a && f >= c)) {
-            System.out.println("Оба дома помещаются на участке.");
+            canFit = true;
         } else if ((f >= (a + c)) && (e >= b && e >= d)) {
-            System.out.println("Оба дома помещаются на участке.");
+            canFit = true;
         } else if ((f >= (a + d)) && (e >= b && e >= c)) {
-            System.out.println("Оба дома помещаются на участке.");
+            canFit = true;
         } else if ((f >= (b + c)) && (e >= a && e >= d)) {
-            System.out.println("Оба дома помещаются на участке.");
+            canFit = true;
         } else if ((f >= (b + d)) && (e >= a && e >= c)) {
-            System.out.println("Оба дома помещаются на участке.");
-        }    
-        else {
-            System.out.println("Оба дома не помещаются на участке.");
+            canFit = true;
+        }
+        
+        if (canFit) {
+            System.out.println("УРА! Он поместится.");
+        } else {
+            System.out.println("Не поместится(");
         }
     }
 }
+
