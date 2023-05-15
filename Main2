@@ -1,0 +1,32 @@
+package GitCourse;
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 3;
+        int b = 1;
+
+        int c = 2;
+        int d = 1;
+
+        int e = 4;
+        int f = 2;
+
+        boolean canFit = false;
+
+        if (a <= e && b <= f) {
+            if (c <= e && d <= f) {
+                canFit = true;
+            }
+        } 
+        if (a <= f && b <= e) {
+            if (c <= f && d <= e) {
+                canFit = true;
+            }
+        }
+        if (canFit) {
+            System.out.println("Оба дома помещаются на участке.");
+        } else {
+            System.out.println("Один или оба дома не помещаются на участке.");
+        }
+    }
+}
