@@ -2,26 +2,35 @@ package GitCourse;
 
 public class Main {
     public static void main(String[] args) {
-        int a = 4;
-        int b = 2;
+        int a = 3; 
+        int b = 1;
 
-        int c = 1;
-        int d = 3;
-
-        int e = 4;
-        int f = 2;
-
-        boolean canFit = false;
-
-        if ((a + c <= e) && (b <= f) && (d <= f)) {
-            canFit = true;
-        } else if ((b +d <= f) && (a <= e) && (c <=e)) {
-            canFit = true;
-        }    
-        if (canFit) {
+        int c = 1; 
+        int d = 2; 
+        
+        int e = 1; 
+        int f = 5; 
+        
+        
+        if ((e >= (a + c)) && (f >= b && f >= d)) {
             System.out.println("Оба дома помещаются на участке.");
-        } else {
-            System.out.println("Один или оба дома не помещаются на участке.");
+        } else if ((e >= (a + d)) && (f >= b && f >= c)) {
+            System.out.println("Оба дома помещаются на участке.");
+        } else if ((e >= (b + c)) && (f >= a && f >= d)) {
+            System.out.println("Оба дома помещаются на участке.");
+        } else if ((e >= (b + d)) && (f >= a && f >= c)) {
+            System.out.println("Оба дома помещаются на участке.");
+        } else if ((f >= (a + c)) && (e >= b && e >= d)) {
+            System.out.println("Оба дома помещаются на участке.");
+        } else if ((f >= (a + d)) && (e >= b && e >= c)) {
+            System.out.println("Оба дома помещаются на участке.");
+        } else if ((f >= (b + c)) && (e >= a && e >= d)) {
+            System.out.println("Оба дома помещаются на участке.");
+        } else if ((f >= (b + d)) && (e >= a && e >= c)) {
+            System.out.println("Оба дома помещаются на участке.");
+        }    
+        else {
+            System.out.println("Оба дома не помещаются на участке.");
         }
     }
 }
